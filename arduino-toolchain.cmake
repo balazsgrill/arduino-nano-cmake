@@ -12,4 +12,4 @@ add_library(core STATIC
 	"${ARDUINOCORE}/cores/arduino/wiring_digital.c"
 	"${ARDUINOCORE}/cores/arduino/wiring_analog.c"
 	"${ARDUINOCORE}/cores/arduino/hooks.c"
-  
+ )
