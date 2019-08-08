@@ -11,8 +11,14 @@ add_library(arduino-core STATIC
 	"$ENV{ARDUINOCORE}/cores/arduino/hooks.c"
  )
 
+add_library(wire STATIC
+	"$ENV{ARDUINOCORE}/libraries/Wire/src/Wire.cpp"
+	"$ENV{ARDUINOCORE}/libraries/Wire/src/utility/twi.c"
+)
+target_include_directories(wire PUBLIC $ENV{ARDUINOCORE}/libraries/Wire/src/)
+
 add_executable(program program.cpp)
-target_link_libraries(program arduino-core)
+target_link_libraries(program arduino-core wire)
 
 add_custom_command(
 	TARGET program POST_BUILD
