@@ -3,7 +3,7 @@ project(arduinon-nano-project
   LANGUAGES C CXX 
   VERSION 0.0.0.0)
 add_executable(program program.cpp)
-target_link_libraries(program core)
+target_link_libraries(program arduino-core)
 
 add_custom_command(
 	TARGET program POST_BUILD
