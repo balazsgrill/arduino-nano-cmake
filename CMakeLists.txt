@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
+project(arduinon-nano-project C CXX)
 add_executable(program program.cpp)
 target_link_libraries(program core)
 
